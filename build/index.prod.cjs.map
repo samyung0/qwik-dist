@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/build/index.prod.ts", "../../src/build/index.ts"],
+  "sourcesContent": ["export { isBrowser, isServer } from './index';\r\n\r\n/**\r\n * True when build is in dev mode.\r\n *\r\n * @public\r\n */\r\nexport const isDev: boolean = false;", "/**\r\n * True when build is made for browser, client-side execution.\r\n *\r\n * @public\r\n */\r\nexport const isBrowser: boolean = /*#__PURE__*/ (() => (\r\n  typeof window !== \"undefined\" &&\r\n  typeof HTMLElement !== \"undefined\" &&\r\n  !!window.document &&\r\n  String(HTMLElement).includes('[native code]')\r\n))();\r\n\r\n/**\r\n * True when build is made for SSR purposes.\r\n *\r\n * @public\r\n */\r\nexport const isServer: boolean = !isBrowser;\r\n\r\n\r\n/**\r\n * True when build is in dev mode.\r\n *\r\n * @public\r\n */\r\nexport const isDev: boolean = /*#__PURE__*/ (() => {\r\n  return (globalThis as any).qDev === true\r\n})();\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;ACKO,IAAM,YAAoC,uBAC/C,OAAO,WAAW,eAClB,OAAO,gBAAgB,eACvB,CAAC,CAAC,OAAO,YACT,OAAO,WAAW,EAAE,SAAS,eAAe,GAC3C;AAOI,IAAM,WAAoB,CAAC;;;ADV3B,IAAM,QAAiB;",
+  "names": []
+}
